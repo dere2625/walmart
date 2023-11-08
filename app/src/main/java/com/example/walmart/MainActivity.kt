@@ -1,6 +1,8 @@
 package com.example.walmart
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
@@ -16,5 +18,15 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_layout)
+
+        val signInBtn : Button = findViewById(R.id.signInButton)
+        signInBtn.setOnClickListener{
+            val shoppingActivityIntent = Intent (this, ShoppingActivity::class.java)
+            startActivity(shoppingActivityIntent)
+        }
+    }
+
+    fun authenticateUser(userName: String, password : String) : Boolean{
+        return false
     }
 }
