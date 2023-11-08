@@ -3,6 +3,7 @@ package com.example.walmart
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
@@ -22,6 +23,8 @@ class MainActivity : ComponentActivity() {
         val signInBtn : Button = findViewById(R.id.signInButton)
         signInBtn.setOnClickListener{
             val shoppingActivityIntent = Intent (this, ShoppingActivity::class.java)
+            val userName : EditText = findViewById(R.id.emailEditText)
+            shoppingActivityIntent.putExtra("email", userName.text.toString())
             startActivity(shoppingActivityIntent)
         }
     }

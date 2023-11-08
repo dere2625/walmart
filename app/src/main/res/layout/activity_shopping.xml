@@ -1,9 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ShoppingActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/txtEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Welcome Email" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_below="@id/txtEmail"
+        android:id="@+id/txtTitle"
+        android:text="Shop by Category"/>
+
+    <LinearLayout
+        android:layout_below="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:padding="5dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/up"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/edtborder">
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="200dp"
+                android:src="@drawable/beauty"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="10dp"
+                android:textSize="18sp"
+                android:text="Beauty"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/edtborder">
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="200dp"
+                android:src="@drawable/electronics"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="10dp"
+                android:textSize="18sp"
+                android:text="Electronics"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/up"
+        android:layout_width="wrap_content"
+        android:id="@+id/down"
+        android:layout_centerHorizontal="true"
+        android:layout_height="300dp"
+        android:orientation="horizontal"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/edtborder">
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="200dp"
+                android:src="@drawable/fashion"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="10dp"
+                android:textSize="18sp"
+                android:text="Fashion"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/edtborder">
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="200dp"
+                android:src="@drawable/food"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="10dp"
+                android:textSize="18sp"
+                android:text="Food"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
